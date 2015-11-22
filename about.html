@@ -13,6 +13,69 @@
 <ul><a href="artist.html" >Artist</a></ul>
 </li>
 
+head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+		
+    <title>NCI Art Gallery</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <h1>Welcome To The NCI Art Gallery</h1>
+	<div class="col-sm-12">
+	    <li>
+	    <ul><a href="index.html" >Home</a></ul>
+	    <ul><a href="about.html" >About</a></ul>
+	    <ul><a href="artist.html" >Artist</a></ul>
+	    </li>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-4">
+			<h2>Calender/Time</h2>
+			<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+<pre>The time right now is ...... </pre>
+		</div>
+				
+		</div>
+	</div>
+			
+	<div class="row">
+		<div class="col-sm-8">
+			<h2>About us </h2>
+			<pre>We came together to set up this art gallery to show our appreciation toward
+			all forms of art from both ends of the spectrum. The NCI Art Society present coming this January
+			and the months following multiple charity exhibitsin order to raise money for those in need of it the most.
+			
+			</pre>
+		</div>
+
+			
+			
+	
+			
+	<div id="footer">
+	
+	</div>
 
 
 

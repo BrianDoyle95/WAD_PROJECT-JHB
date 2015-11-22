@@ -1,21 +1,79 @@
 <!DOCTYPE Html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html lang="en">
 <head>
-<title>NCI Art Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+		
+    <title>NCI Art Gallery</title>
 </head>
 <body>
+  <div class="container-fluid">
+    <h1>Welcome To The NCI Art Gallery</h1>
+	<div class="col-sm-12">
+	    <li>
+	    <ul><a href="index.html" >Home</a></ul>
+	    <ul><a href="about.html" >About</a></ul>
+	    <ul><a href="artist.html" >Artist</a></ul>
+	    </li>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-4">
+			<h2>Calender/Time</h2>
+			<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+<pre>The time right now is ...... </pre>
+		</div>
+				
+		<div class="col-sm-8">
+			<h2>Event Information</h2>
+			<pre>Come and join us for a celebration of art on the 16th of January.
+			     Events will be running all day including a charity raffle
+			     at 7:30pm in aid of St Vincent De Paul.
+			     Fun for all the family.</pre>
+		</div>
+	</div>
+			
+	<div class="row">
+		<div class="col-sm-8">
+			<h2>Artist Information</h2>
+			<pre>The artists whose work will be on display are Da vinci , Picasso etc... </pre>
+		</div>
 
-<h1>Welcome To The NCI Art Gallery</h1>
+			
+		<div class="col-sm-4">
+			<h2>Slideshow</h2>
+			<pre>Come to our exhibition and see art pieces such as these magnificent works of art.</pre>
+		</div>
+	</div>
+			
+	
+			
+	<div id="footer">
+	
+	</div>
 
-<li>
-<ul><a href="index.html" >Home</a></ul>
-<ul><a href="about.html" >About</a></ul>
-<ul><a href="artist.html" >Artist</a></ul>
-</li>
 
-
-
-
-
+  </div>
 </body>
 </html>
