@@ -9,23 +9,7 @@
   <meta charset="utf-8">
 		
     <title>NCI Art Gallery</title>
-</head>
-<body onload="startTime()">  <!----edit clock postioning when possible ----->
-  <div id="txt"></div>	
-  <div class="container-fluid">
-    <h1>Welcome To The NCI Art Gallery</h1>
-	<div class="col-sm-12">
-	    <li>
-	    <ul><a href="index.html" >Home</a></ul>
-	    <ul><a href="about.html" >About</a></ul>
-	    <ul><a href="artist.html" >Artist</a></ul>
-	    </li>
-	</div>
-	
-	<div class="row">
-		<div class="col-sm-4">
-			<h2>Calender/Time</h2>
-			<script type="text/javascript">
+<script type="text/javascript">
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -42,6 +26,23 @@ function checkTime(i) {
     return i;
 }
 </script>
+	</head>
+<body onload="startTime()">  <!----edit clock postioning when possible ----->
+  <div id="txt"></div>	
+  <div class="container-fluid">
+    <h1>Welcome To The NCI Art Gallery</h1>
+	<div class="col-sm-12">
+	    <li>
+	    <ul><a href="index.html" >Home</a></ul>
+	    <ul><a href="about.html" >About</a></ul>
+	    <ul><a href="artist.html" >Artist</a></ul>
+	    </li>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-4">
+			<h2>Calender/Time</h2>
+			
 <pre>The time right now is ...... </pre>
 		</div>
 				
