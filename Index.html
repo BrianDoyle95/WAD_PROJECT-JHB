@@ -9,7 +9,7 @@
 		
     <title>NCI Art Gallery</title>
 			<script type="text/javascript">
-function startTime() {
+
    function startTime() {
     var today = new Date();
     var hours = today.getHours();
@@ -26,8 +26,10 @@ function checkTime(i) {
     return i;
 }
 </script>
-	</head>
+
+</head>
 <body onload="startTime()"> <!----edit clock postioning when possible ----->
+  <div id="txt"></div>	
   <div class="container-fluid">
     <h1>Welcome To The NCI Art Gallery</h1>
 	<div class="col-sm-12">
@@ -35,7 +37,7 @@ function checkTime(i) {
 	    <ul><a href="index.html" >Home</a></ul>
 	    <ul><a href="about.html" >About</a></ul>
 	    <ul><a href="Gallery.html" >Gallery</a></ul>
-		<ul><a href="Exhbition.html" >Exhibiton</a></ul>
+		<ul><a href="Exhibition.html" >Exhibiton</a></ul>
 		<ul><a href="artist.html" >Artist</a></ul>
 	    </li>
 	</div>
@@ -44,7 +46,17 @@ function checkTime(i) {
 		<div class="col-sm-4">
 			<h2>Calender/Time</h2>
 
-<pre>The time right now is ...... </pre>
+<h3>Today's date is ...... 
+	<script type="text/javascript">
+<!--
+var Time = new Date()
+var m = Time.getMonth() + 1      <!----- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php ------->
+var d = Time.getDate()
+var y = Time.getFullYear()
+document.write(m + "/" + d + "/" + y)
+//-->
+</script>	
+</h3>		
 		</div>
 		
 
