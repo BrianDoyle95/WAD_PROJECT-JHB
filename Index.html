@@ -1,7 +1,7 @@
 <!DOCTYPE Html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
 
-<html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -12,18 +12,19 @@
     <title>NCI Art Gallery</title>
 			<script type="text/javascript">
 function startTime() {
+   function startTime() {
     var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('txt').innerHTML =
-    h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+    var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    document.getElementById('text').innerHTML =
+    hours + ":" + minutes + ":" + seconds ;
+    var currenttime = setTimeout(startTime, 500);
 }
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {i = "0" + i}; 
     return i;
 }
 </script>
