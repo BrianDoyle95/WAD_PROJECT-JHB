@@ -1,35 +1,31 @@
 <!DOCTYPE Html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <meta charset="utf-8">
-  
-  <link rel="stylesheet" href="index.css" type="text/css" media="screen" />
-		
-    <title>NCI Art Gallery</title>
-			<script type="text/javascript">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 3</title>
+		<meta name="viewport" content="width=device-vidth, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<script type="text/javascript">
 
-   function startTime() {
-    var today = new Date();
-    var hours = today.getHours();
-    var minutes = today.getMinutes();
-    var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
-    minutes = checkTime(minutes);
-    seconds = checkTime(seconds);
-    document.getElementById('text').innerHTML =
-    hours + ":" + minutes + ":" + seconds ;
-    var currenttime = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i}; 
-    return i;
-}
-</script>
+		   function startTime() {
+				var today = new Date();
+				var hours = today.getHours();
+				var minutes = today.getMinutes();
+				var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
+				minutes = checkTime(minutes);
+				seconds = checkTime(seconds);
+				document.getElementById('text').innerHTML =
+				hours + ":" + minutes + ":" + seconds ;
+				var currenttime = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+				if (i < 10) {i = "0" + i}; 
+				return i;
+			}
+		</script>
 
-</head>
+	</head>
 <body onload="startTime()"> <!----edit clock postioning when possible ----->
   <div id="txt"></div>	
   <div class="container-fluid">
