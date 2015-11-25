@@ -1,37 +1,36 @@
 <!DOCTYPE Html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <meta charset="utf-8">
-  
-   <link rel="stylesheet" href="index.css" type="text/css" media="screen" />
-		
-    <title>NCI Art Gallery</title>
-			<script type="text/javascript"> 
-   function startTime() {
-    var today = new Date();
-    var hours = today.getHours();
-    var minutes = today.getMinutes();
-    var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
-    minutes = checkTime(minutes);
-    seconds = checkTime(seconds);
-    document.getElementById('text').innerHTML =
-    hours + ":" + minutes + ":" + seconds ;
-    var currenttime = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i}; 
-    return i;
-}
-</script>
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 3</title>
+		<meta name="viewport" content="width=device-vidth, initial-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<script type="text/javascript"> 
+			function startTime() {
+				var today = new Date();
+				var hours = today.getHours();
+				var minutes = today.getMinutes();
+				var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
+				minutes = checkTime(minutes);
+				seconds = checkTime(seconds);
+				document.getElementById('text').innerHTML =
+				hours + ":" + minutes + ":" + seconds ;
+				var currenttime = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+				if (i < 10) {i = "0" + i}; 
+				return i;
+			}
+		</script>
 	</head>
-<body onload="startTime()"> <!----edit clock postioning when possible ----->
-  <div id="txt"></div>	
-  <div class="container-fluid">
-    <h1>Gallery</h1>
+	<body onload="startTime()">  <!----edit clock postioning when possible ----->
+			<div class="container">
+				
+			<!--LOGO&Banner-->
+			<header class="row header">
+				<h1 class="text-center">Welcome to NCI Art Gallery</h1>
+			</header>
 	
 	<!--Navigation still in PROGRESS-->
 	<nav class="navbar navbar-inverse">
@@ -64,48 +63,49 @@ function checkTime(i) {
 			</nav>
 <!--NAVIGATION ABOVE STILL IN PROGRESS-->
 	
-	<div class="row">
-		<div class="col-sm-4">
-			<h2>Calender/Time</h2>
-
-<h3>Today's date is ...... 
-	<script type="text/javascript">
-<!--
-var Time = new Date()
-var m = Time.getMonth() + 1      <!----- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php ------->
-var d = Time.getDate()
-var y = Time.getFullYear()
-document.write(m + "/" + d + "/" + y)
-//-->
-</script>	
-</h3>		
-		</div>
-		
-
-<div id="txt"></div>		
-		
+			<!--Row 1, Calender & Information 1-->
+			<div class="row">
+				<div class="calender col-xs-12 col-md-4">
+					<h3>Today's date is ...... 
+						<script type="text/javascript">
+					<!--
+					var Time = new Date()
+					var m = Time.getMonth() + 1      <!----- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php ------->
+					var d = Time.getDate()
+					var y = Time.getFullYear()
+					document.write(m + "/" + d + "/" + y)
+					//-->
+					</script>	
+					</h3>		
+				</div>	
+				
+				<div class="info1 col-xs-12 col-sm-12 col-md-8">
+					<h2>Event Information</h2>
+					<p>Come and join us for a celebration of art on the 16th of January.
+						 Events will be running all day including a charity raffle
+						 at 7:30pm in aid of St Vincent De Paul.
+						 Fun for all the family.</p>
+				</div>
+			</div>
 	
+			<!--slideshow-->
+			<div class="row text-center slideshow">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+						<h1>This is for the Slideshow</h1>
+					</div>
+			</div>
 			
-	<div class="row">
-		<div class="col-sm-8">
-			<h2>Artist Information</h2>
-			<pre>The artists whose work will be on display are Da vinci , Picasso etc... </pre>
+			<!--FOOTER-->
+			<footer class="row footer">
+				<p class="text-center">
+					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
+					Duis mollis, est non commodo luctus.
+					</p>
+			</footer>
+
+			<!--This is the javascript-->
+			<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
 		</div>
-
-			
-		<div class="col-sm-4">
-			<h2>Slideshow</h2>
-			<pre>Come to our exhibition and see art pieces such as these magnificent works of art.</pre>
-		</div>
-	</div>
-			
-	
-			
-	<div id="footer">
-	
-	</div>
-
-
-  </div>
-</body>
+	</body>
 </html>
