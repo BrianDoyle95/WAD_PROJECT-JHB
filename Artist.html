@@ -6,7 +6,22 @@
 		<meta name="viewport" content="width=device-vidth, initial-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<script type="text/javascript"> 
+		<style type="text/css">
+		     #text{
+			 width:120px;
+			 height:120px;
+			 margin: 6px auto;
+			 border-radius:60%;
+			 border: 12px dotted silver;			 
+			 background: black;
+			 color: blue;
+			 font-size:25px;
+			 font-family: "Times New Roman", Times, serif;
+			 text-align: center;
+			 line-height:100px;
+			}
+	</style>
+		<script> 
 			function startTime() {
 				var today = new Date();
 				var hours = today.getHours();
@@ -25,7 +40,9 @@
 		</script>
 	</head>
 	<body onload="startTime()"> <!----edit clock postioning when possible ----->
-		<div class="container">
+			<div id="text"></div>
+			<div class="container"></div>
+		
 			
 		<!--LOGO&Banner-->
 		<header class="row header">
