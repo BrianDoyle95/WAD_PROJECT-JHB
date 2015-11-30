@@ -95,3 +95,51 @@ body{
             padding-left: 10px;
         }
 
+.svp{
+	float: left;
+	height: 100px;
+	width: 100px;
+}
+
+.trocaire{
+	float: left;
+	height: 100px;
+	width: 100px;
+}
+
+p{
+	font-family: Verdana;
+}
+
+h2{
+	text-align: center;
+}
+
+.events{
+	height: 330px;
+	margin-bottom: 30px;
+}
+
+#artist{
+	height: 150px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+footer{
+	height:100px;
+	background-color: #5A5D65;
+	color: #FFFFFF;
+}
+
+.navbar{
+	background-color: #5A5D65;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: #779EFE;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: #FFFFFF;
+}
