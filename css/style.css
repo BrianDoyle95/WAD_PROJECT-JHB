@@ -125,18 +125,27 @@ h2{
 
 footer{
 	height:100px;
-	background-color: #5A5D65;
+	background-color: #000000;
 	color: #FFFFFF;
 }
 
 .navbar{
-	background-color: #5A5D65;
+	background-color: #000000;
+	border-radius: 0px;
+	margin: auto;
+	max-width: 1080px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-	background-color: #779EFE;
+	background-color: #FFFFFF;
 }
 
 .navbar-default .navbar-nav>li>a{
 	color: #FFFFFF;
 }
+
+.navbar-default .navbar-nav>li>a{
+	color: #FFFFFF;
+}
+
+
