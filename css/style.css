@@ -4,16 +4,15 @@ body{
 
  #text{
 			 width:120px;
-			 height:120px;
+			 height:50px;
 			 margin: 6px auto;
-			 border-radius:60%;
-			 border: 12px dotted silver;			 
+			 border: 2px dotted silver;			 
 			 background: white;
 			 color: black;
 			 font-size:20px;
 			 font-family: Magneto, georgian, serif;
 			 text-align: center;
-			 line-height:100px;
+			 line-height:50px;
 			}
 
 /* jssor slider bullet navigator skin 01 css */
@@ -115,7 +114,7 @@ h2{
 
 .events{
 	height: 330px;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 
 #artist{
@@ -126,19 +125,30 @@ h2{
 
 footer{
 	height:100px;
-	background-color: #5A5D65;
+	background-color: #000000;
 	color: #FFFFFF;
 }
 
 .navbar{
-	background-color: #5A5D65;
+	background-color: #000000;
+	border-radius: 0px;
+	margin: auto;
+	max-width: 1080px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-	background-color: #779EFE;
+	background-color: #FFFFFF;
 }
 
 .navbar-default .navbar-nav>li>a{
 	color: #FFFFFF;
 }
 
+.navbar-default .navbar-nav>li>a{
+	color: #FFFFFF;
+}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7c1c2e09581945450a5fa0203aec28a5d444405c
