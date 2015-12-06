@@ -123,7 +123,7 @@ h2{
 	margin-bottom: 30px;
 }
 
-footer{
+.footer{
 	height:100px;
 	background-color: #000000;
 	color: #FFFFFF;
@@ -144,8 +144,8 @@ footer{
 	color: #FFFFFF;
 }
 
-.navbar-default .navbar-nav>li>a{
-	color: #FFFFFF;
+span{
+	background-color: #000000;
 }
 
 
