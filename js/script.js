@@ -14,5 +14,5 @@ function setText(id, val){
     document.getElementById(id).innerHTML = val;
 };
 
-
+// Call calendar() when page loads
 window.onload = calendar;
