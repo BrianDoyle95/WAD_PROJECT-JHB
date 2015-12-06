@@ -1,19 +1,21 @@
-<!DOCTYPE Html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Bootstrap 3</title>
-		<meta name="viewport" content="width=device-vidth, initial-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-		<script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		
+		<title>Bootstrap 3</title>
+		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/style.css" rel="stylesheet"/>
+
+		<script type="text/javascript">
 
 		   function startTime() {
 				var today = new Date();
 				var hours = today.getHours();
 				var minutes = today.getMinutes();
-				var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
+				var seconds = today.getSeconds();  <!-- clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock -->
 				minutes = checkTime(minutes);
 				seconds = checkTime(seconds);
 				document.getElementById('text').innerHTML =
@@ -27,20 +29,20 @@
 		</script>
 
 	</head>
-	<body onload="startTime()">  <!----edit clock postioning when possible ----->
+	<body onload="startTime()">  <!--edit clock postioning when possible ----->
 			<div id="text"></div>
 		<div class="container">
 			
-		<!--LOGO&Banner-->
-		<header class="row header">
-			<img src="images/logo4.png" class="img-responsive" alt="Responsive image">
-		</header>
+		<!-- logo and banner -->
+		<div class="row header">
+			<img src="images/logo4.png" class="img-responsive" alt="Responsive image"/>
+		</div>
 		
-	<!--Navigation still in PROGRESS-->
+	<!--Navigation still in PROGRESS -->
 	
 		<div class="navbar navbar-default row">
 			<ul class="nav navbar-nav">
-				<li><a href="Index.html">Home</a></li>
+				<li><a href="indexpage.html">Home</a></li>
 				<li class="active"><a href="about.html">About</a></li>
 				<li><a href="Artist.html">Artist</a></li>
 				<li><a href="Exhibition.html">Exhibition</a></li>
@@ -55,20 +57,20 @@
 				<div class="calender col-xs-12 col-md-4">
 					<h3>Today's date is ...... 
 						<script type="text/javascript">
-					<!--
+					
 					var Time = new Date()
-					var m = Time.getMonth() + 1      <!----- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php ------->
+					var m = Time.getMonth() + 1      <!-- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php -->
 					var d = Time.getDate()
 					var y = Time.getFullYear()
 					document.write(m + "/" + d + "/" + y)
-					//-->
+				
 					</script>	
 					</h3>		
 				</div>	
 		
 		
 				<div class="info1 col-xs-12 col-sm-12 col-md-8">
-					<h2>Event Information</h2>
+					<h2>About Us</h2>
 					<p>Come and join us for a celebration of art on the 16th of January.
 						 Events will be running all day including a charity raffle
 						 at 7:30pm in aid of St Vincent De Paul.
@@ -78,28 +80,30 @@
 			
 			<!--Row 2, Information  & Information 3-->
 			<div class="row">
-			<div class="info2 col-xs-12 col-sm-6 col-md-6">
+			<div class="info2 col-xs-12 col-sm-12 col-md-12">
+			<h2>Contact Us</h2>
 			<p>The artists whose work will be on display are Da vinci , Picasso etc... We expect to have a large variety of art types i.e.
 			   sculptures,paintings.</p>
+			</div>
 			</div>
 
 			
 				
 		
 		<!--FOOTER-->
-			<footer class="row footer">
+			<div class="row footer">
 				<p class="text-center">
 					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
 					Duis mollis, est non commodo luctus.
 					</p>
-			</footer>
+			</div>
 
 			<!--This is the javascript-->
-			<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-			<script src="js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-		</div>
+		
 
-
+	</div>
 	</body>
 </html>
