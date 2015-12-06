@@ -1,21 +1,23 @@
-<!DOCTYPE Html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-		<meta charset="UTF-8">
+		
 		<title>Bootstrap 3</title>
-		<meta name="viewport" content="width=device-vidth, initial-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/style.css" rel="stylesheet"/>
 
 
-		<script>
+		<script type="text/javascript">
 
 
 		   function startTime() {
 				var today = new Date();
 				var hours = today.getHours();
 				var minutes = today.getMinutes();
-				var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
+				var seconds = today.getSeconds();         <!--clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
 				minutes = checkTime(minutes);
 				seconds = checkTime(seconds);
 				document.getElementById('text').innerHTML =
@@ -34,15 +36,15 @@
 		<div class="container">
 			
 		<!--LOGO&Banner-->
-		<header class="row header">
-			<img src="images/logo4.png" class="img-responsive" alt="Responsive image">
-		</header>
+		<div class="row header">
+			<img src="images/logo4.png" class="img-responsive" alt="Responsive image"/>
+		</div>
 		
 	<!--Navigation still in PROGRESS-->
 	
 		<div class="navbar navbar-default row">
 			<ul class="nav navbar-nav">
-				<li><a href="Index.html">Home</a></li>
+				<li><a href="indexpage.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
 				<li><a href="Artist.html">Artist</a></li>
 				<li class="active"><a href="Exhibition.html">Exhibition</a></li>
@@ -57,13 +59,13 @@
 				<div class="calender col-xs-12 col-md-4">
 					<h3>Today's date is ...... 
 						<script type="text/javascript">
-					<!--
+					
 					var Time = new Date()
 					var m = Time.getMonth() + 1      <!----- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php ------->
 					var d = Time.getDate()
 					var y = Time.getFullYear()
 					document.write(m + "/" + d + "/" + y)
-					//-->
+				
 					</script>	
 					</h3>		
 				</div>	
@@ -92,7 +94,7 @@
 			</div>
 		<script type="text/javascript" src="js/jssor.slider.mini.js"> </script>
 			<script type="text/javascript" src="js/jquery-1.9.1.min.js"> </script>
-                   <script>
+                   <script type="text/javascript">
         jQuery(document).ready(function ($) {
             
             var jssor_1_SlideshowTransitions = [
@@ -142,88 +144,6 @@
         });
     </script>
 
-    <!--<style>
-        
-        /* jssor slider bullet navigator skin 01 css */
-        /*
-        .jssorb01 div           (normal)
-        .jssorb01 div:hover     (normal mouseover)
-        .jssorb01 .av           (active)
-        .jssorb01 .av:hover     (active mouseover)
-        .jssorb01 .dn           (mousedown)
-        */
-        .jssorb01 {
-            position: absolute;
-        }
-        .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
-            position: absolute;
-            /* size of bullet elment */
-            width: 12px;
-            height: 12px;
-            filter: alpha(opacity=70);
-            opacity: .7;
-            overflow: hidden;
-            cursor: pointer;
-            border: #000 1px solid;
-        }
-        .jssorb01 div { background-color: gray; }
-        .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
-        .jssorb01 .av { background-color: #fff; }
-        .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
-
-        /* jssor slider arrow navigator skin 05 css */
-        /*
-        .jssora05l                  (normal)
-        .jssora05r                  (normal)
-        .jssora05l:hover            (normal mouseover)
-        .jssora05r:hover            (normal mouseover)
-        .jssora05l.jssora05ldn      (mousedown)
-        .jssora05r.jssora05rdn      (mousedown)
-        */
-        .jssora05l, .jssora05r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            background: url('img/a17.png') no-repeat;
-            overflow: hidden;
-        }
-        .jssora05l { background-position: -10px -40px; }
-        .jssora05r { background-position: -70px -40px; }
-        .jssora05l:hover { background-position: -130px -40px; }
-        .jssora05r:hover { background-position: -190px -40px; }
-        .jssora05l.jssora05ldn { background-position: -250px -40px; }
-        .jssora05r.jssora05rdn { background-position: -310px -40px; }
-
-        /* jssor slider thumbnail navigator skin 09 css */
-        
-        .jssort09-600-45 .p {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 600px;
-            height: 45px;
-        }
-        
-        .jssort09-600-45 .t {
-            font-family: verdana;
-            font-weight: normal;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            color:#fff;
-            line-height: 45px;
-            font-size: 20px;
-            padding-left: 10px;
-        }
-        
-    </style>-->
-
-
     <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -269,20 +189,17 @@
         <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
     </div>
 			<!--FOOTER-->
-			<footer class="row footer">
+			<div class="row footer">
 				<p class="text-center">
 					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
 					Duis mollis, est non commodo luctus.
 					</p>
-			</footer>
+			</div>
 
 			<!--This is the javascript-->
-			<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-			<script src="js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 		</div>
-
-
-  </div>
 </body>
 </html>
