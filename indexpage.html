@@ -1,44 +1,15 @@
-<<<<<<< HEAD:Index.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bootstrap 3</title>
-    <meta content="width=device-vidth, initial-scale=1" name="viewport">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-   
-    </script>
-    <script>
-        function startTime() {
-            var today = new Date();
-            var hours = today.getHours();
-            var minutes = today.getMinutes();
-            var seconds = today.getSeconds(); <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
-            minutes = checkTime(minutes);
-            seconds = checkTime(seconds);
-            document.getElementById('text').innerHTML =
-                hours + ":" + minutes + ":" + seconds;
-            var currenttime = setTimeout(startTime, 500);
-        }
-
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i
-</script>
-				=======
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
-	<title> NCI Art Gallery</title>
+		
+		<title>Bootstrap 3</title>
 		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
-		
+
 		<script type="text/javascript">
 
 		   function startTime() {
@@ -57,45 +28,52 @@
 				return i;
 			}
 		</script>
-</head>
 
-<body onload="startTime()"> 
-	<div id="text"></div>
+	</head>
+	<body onload="startTime()"> <!--edit clock postioning when possible-->
+		<div id="text"></div>
 		
 		<div class="container">
+			
+		<!--logo and banner-->
+		<header class="row header">
 		
-		<div class="row header">
 			<img src="images/logo4.png" class="img-responsive" alt="Responsive image"/>
-		</div>
-		
+		</header>
+
+	<!--Navigation still in PROGRESS-->
+	
 		<div class="navbar navbar-default row">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="indexpage.html">Home</a></li>
+				<li class="active"><a href="Index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
 				<li><a href="Artist.html">Artist</a></li>
 				<li><a href="Exhibition.html">Exhibition</a></li>
 				<li><a href="Gallery.html">Gallery</a></li>
 			</ul>
+	
 		</div>
-		
-		<div class="row">
-			<div class="calender col-xs-12 col-md-4">
-				<h3>Today's date is ...... 
-					<script type="text/javascript">
-					
+	<!--NAVIGATION ABOVE STILL IN PROGRESS-->
+	
+				<!--Row 1, Calender & Information 1-->
+			<div class="row">
+				<div class="calender col-xs-12 col-md-4">
+					<h3>Today's date is ...... 
+						<script type="text/javascript">
+					<!--
 					var Time = new Date()
-					var m = Time.getMonth() + 1      <!--calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php-->
+					var m = Time.getMonth() + 1      <!----- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php ------->
 					var d = Time.getDate()
 					var y = Time.getFullYear()
 					document.write(m + "/" + d + "/" + y)
-					
+					//-->
 					</script>	
-				</h3>		
-			</div>
+					</h3>		
+				</div>	
 		
 		
-		<div class="info1 col-xs-12 col-sm-12 col-md-8 events">
-				<div class="media">
+				<div class="info1 col-xs-12 col-sm-12 col-md-8 events">
+					<div class="media">
 					<h2>Event Information</h2>
 						<div class="media-left">
 							<img class="svp" src="images/svp.png"/>
@@ -107,7 +85,7 @@
 							 at 7:30pm in aid of St Vincent De Paul.
 							 Fun for all the family.</p>
 						</div>
-						<br/>
+						<br>
 						<div class="media-left">
 							<img class="trocaire" src="images/trocaire.png"/>
 						</div>
@@ -120,7 +98,9 @@
 				</div>
 			</div>
 		</div>
-			
+		
+		
+	<!--Row 2, Information  & Information 3-->
 			<div class="row">
 				<div class="info2 col-xs-12 col-sm-6 col-md-3">
 				<div class="media-body">
@@ -180,32 +160,31 @@
 				</div>
 				
 				<div class="info2 col-xs-12 col-sm-6 col-md-3">
-					<div class="media-body">
-						<h4 class="media-heading">Jay Maisel</h4>
-						<dl>
-							<dt>Description</dt>
-							<dd>Claude Monet life Summarized. When he started
-							when he died, how famous is etc</dd>
-							<dt>Painting</dt>
-							<dd>list of his painting:
-							<ul>
-							<li>Painting</li>
-							<li>Painting</li>
-							<li>Painting</li>
-							</ul></dd>
-							<dd><a href="#">More</a></dd>
-						</dl>
-					</div>
+				<div class="media-body">
+					<h4 class="media-heading">Jay Maisel</h4>
+					<dl>
+						<dt>Description</dt>
+						<dd>Claude Monet life Summarized. When he started
+						when he died, how famous is etc</dd>
+						<dt>Painting</dt>
+						<dd>list of his painting:
+						<ul>
+						<li>Painting</li>
+						<li>Painting</li>
+						<li>Painting</li>
+						</ul></dd>
+						<dd><a href="#">More</a></dd>
+					</dl>
+				</div>
 				</div>
 				
 				<div class="info3 col-xs-12 col-sm-12 col-md-12">
 					<h2>Slideshow</h2>
-					<p>Come to our exhibition and see art pieces such as these magnificent works of art.</p>
+					<pre>Come to our exhibition and see art pieces such as these magnificent works of art.</pre>
 				</div>
-			<script type="text/javascript" src="js/jssor.slider.mini.js"> </script>
+				<script type="text/javascript" src="js/jssor.slider.mini.js"> </script>
 			<script type="text/javascript" src="js/jquery-1.9.1.min.js"> </script>
-			
-			<script type="text/javascript">
+                   <script type="text/javascript">
         jQuery(document).ready(function ($) {
             
             var jssor_1_SlideshowTransitions = [
@@ -231,60 +210,31 @@
                 $Cols: 1,
                 $Align: 0
               }
->>>>>>> 2ee0057a75c5dd44cf841a377ed8493e6c65ea39:indexpage.html
             };
-            return i;
-        }
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
     </script>
-<<<<<<< HEAD:Index.html
-</head>
-<body onload="startTime()">
-    <!--==edit clock postioning when possible ===-->
-    <div id="text"></div>
-    <div class="container">
-        <!--LOGO&Banner-->
-        <header class="row header">
-            <img alt="Responsive image" class="img-responsive" src=
-            "images/logo4.png">
-        </header><!--Navigation still in PROGRESS-->
-        <div class="navbar navbar-default row">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="Index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="Artist.html">Artist</a></li>
-                <li><a href="Exhibition.html">Exhibition</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-            </ul>
-        </div><!--NAVIGATION ABOVE STILL IN PROGRESS-->
-        <!--Row 1, Calender & Information 1-->
-        <div id="calendar">
- <div id="calendar-header">
- </div>
- </div>
-        <div class="info1 col-xs-12 col-sm-12 col-md-8 events">
-            <div class="media">
-                <h2>Event Information</h2>
-                <div class="media-left"><img class="svp" src=
-                "images/svp.png"></div>
-                <div class="media-body">
-                    <h4 class="media-heading">St.Vincent De Paul Charity</h4>
-                    <p>Come and join us for a celebration of art on the 16th of
-                    January. Events will be running all day including a charity
-                    raffle at 7:30pm in aid of St Vincent De Paul. Fun for all
-                    the family.</p>
-                </div><br>
-                <div class="media-left"><img class="trocaire" src=
-                "images/trocaire.png"></div>
-                <div class="media-body">
-                    <h4 class="media-heading">Trocaire Fundraising</h4>
-                    <p>Visit the fundraising event that will be happening on
-                    the 20th February. From special perfomances to the
-                    fundraising bingo game. It will be happening at 7:00pm in
-                    the aid of Trocaire. Event open to all ages.</p>
-                </div>
-=======
-	
-	<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
@@ -294,238 +244,35 @@
             <div data-p="112.50" style="display: none;">
                 <img data-u="image" src="images/monet1.jpg" />
                 <div data-u="thumb">Claude Monet</div>
->>>>>>> 2ee0057a75c5dd44cf841a377ed8493e6c65ea39:indexpage.html
             </div>
-        </div>
-    </div><!--Row 2, Information  & Information 3-->
-    <div class="row">
-        <div class="info2 col-xs-12 col-sm-6 col-md-3">
-            <div class="media-body">
-                <h4 class="media-heading">Claude Monet</h4>
-                <dl>
-                    <dt>Description</dt>
-                    <dd>Claude Monet life Summarized. When he started when he
-                    died, how famous is etc</dd>
-                    <dt>Painting</dt>
-                    <dd>
-                        list of his painting:
-                        <ul>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                        </ul>
-                    </dd>
-                    <dd><a href="#">More</a></dd>
-                </dl>
-            </div>
-        </div>
-        <div class="info2 col-xs-12 col-sm-6 col-md-3">
-            <div class="media-body">
-                <h4 class="media-heading">Auguste Rodin</h4>
-                <dl>
-                    <dt>Description</dt>
-                    <dd>Claude Monet life Summarized. When he started when he
-                    died, how famous is etc</dd>
-                    <dt>Painting</dt>
-                    <dd>
-                        list of his painting:
-                        <ul>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                        </ul>
-                    </dd>
-                    <dd><a href="#">More</a></dd>
-                </dl>
-            </div>
-        </div>
-        <div class="info2 col-xs-12 col-sm-6 col-md-3">
-            <div class="media-body">
-                <h4 class="media-heading">Cindy Sherman</h4>
-                <dl>
-                    <dt>Description</dt>
-                    <dd>Claude Monet life Summarized. When he started when he
-                    died, how famous is etc</dd>
-                    <dt>Painting</dt>
-                    <dd>
-                        list of his painting:
-                        <ul>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                        </ul>
-                    </dd>
-                    <dd><a href="#">More</a></dd>
-                </dl>
-            </div>
-        </div>
-        <div class="info2 col-xs-12 col-sm-6 col-md-3">
-            <div class="media-body">
-                <h4 class="media-heading">Jay Maisel</h4>
-                <dl>
-                    <dt>Description</dt>
-                    <dd>Claude Monet life Summarized. When he started when he
-                    died, how famous is etc</dd>
-                    <dt>Painting</dt>
-                    <dd>
-                        list of his painting:
-                        <ul>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                            <li>Painting</li>
-                        </ul>
-                    </dd>
-                    <dd><a href="#">More</a></dd>
-                </dl>
-            </div>
-        </div>
-        <div class="info3 col-xs-12 col-sm-12 col-md-12">
-            <h2>Slideshow</h2>
-            <pre>
-Come to our exhibition and see art pieces such as these magnificent works of art.
-</pre>
-        </div>
-<<<<<<< HEAD:Index.html
-        <script src="js/jssor.slider.mini.js" type="text/javascript">
-        </script> 
-        <script src="js/jquery-1.9.1.min.js" type="text/javascript">
-        </script> 
-        <script>
-            jQuery(document).ready(function($) {
-
-                var jssor_1_SlideshowTransitions = [{
-                    $Duration: 1200,
-                    x: -0.3,
-                    $During: {
-                        $Left: [0.3, 0.7]
-                    },
-                    $Easing: {
-                        $Left: $Jease$.$InCubic,
-                        $Opacity: $Jease$.$Linear
-                    },
-                    $Opacity: 2
-                }, {
-                    $Duration: 1200,
-                    x: 0.3,
-                    $SlideOut: true,
-                    $Easing: {
-                        $Left: $Jease$.$InCubic,
-                        $Opacity: $Jease$.$Linear
-                    },
-                    $Opacity: 2
-                }];
-
-                var jssor_1_options = {
-                    $AutoPlay: true,
-                    $SlideshowOptions: {
-                        $Class: $JssorSlideshowRunner$,
-                        $Transitions: jssor_1_SlideshowTransitions,
-                        $TransitionsOrder: 1
-                    },
-                    $ArrowNavigatorOptions: {
-                        $Class: $JssorArrowNavigator$
-                    },
-                    $BulletNavigatorOptions: {
-                        $Class: $JssorBulletNavigator$
-                    },
-                    $ThumbnailNavigatorOptions: {
-                        $Class: $JssorThumbnailNavigator$,
-                        $Cols: 1,
-                        $Align: 0
-                    }
-                };
-
-                var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-                //responsive code begin
-                //you can remove responsive code if you don't want the slider scales while window resizing
-                function ScaleSlider() {
-                    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                    if (refSize) {
-                        refSize = Math.min(refSize, 600);
-                        jssor_1_slider.$ScaleWidth(refSize);
-                    } else {
-                        window.setTimeout(ScaleSlider, 30);
-                    }
-                }
-                ScaleSlider();
-                $(window).bind("load", ScaleSlider);
-                $(window).bind("resize", ScaleSlider);
-                $(window).bind("orientationchange", ScaleSlider);
-                //responsive code end
-            });
-        </script>
-        <div id="jssor_1" style=
-        "position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
-        <!-- Loading Screen -->
-            <div data-u="loading" style=
-            "position: absolute; top: 0px; left: 0px;">
-                <div style=
-                "filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
-                <div style=
-                "position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;">
-                </div>
-            </div>
-            <div data-u="slides" style=
-            "cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
             <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="images/monet1.jpg">
-                    <div data-u="thumb">
-                        Claude Monet
-                    </div>
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="images/dali1.jpg">
-                    <div data-u="thumb">
-                        Salvador Dali
-                    </div>
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="images/valByrene1.jpg">
-                    <div data-u="thumb">
-                        Henri Byrene
-                    </div>
-                </div>
-                <div data-p="112.50" style="display: none;">
-                    <img data-u="image" src="images/jayMaisel1.jpg">
-                    <div data-u="thumb">
-                        Jay Maisel
-                    </div>
-                </div>
-            </div><!-- Thumbnail Navigator -->
-            <div class="jssort09-600-45" data-u="thumbnavigator" style=
-            "position:absolute;bottom:0px;left:0px;width:600px;height:45px;">
-                <div style=
-                "position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;">
-                </div><!-- Thumbnail Item Skin Begin -->
-                <div data-u="slides" style="cursor: default;">
-                    <div class="p" data-u="prototype">
-                        <div class="t" data-u="thumbnailtemplate"></div>
-                    </div>
-                </div><!-- Thumbnail Item Skin End -->
-            </div><!-- Bullet Navigator -->
-            <div class="jssorb01" data-u="navigator" style=
-            "bottom:16px;right:16px;">
-                <div data-u="prototype" style="width:12px;height:12px;"></div>
-            </div><!-- Arrow Navigator -->
-            <span class="jssora05l" data-autocenter="2" data-u="arrowleft"
-            style="top:0px;left:8px;width:40px;height:40px;"></span>
-            <span class="jssora05r" data-autocenter="2" data-u="arrowright"
-            style="top:0px;right:8px;width:40px;height:40px;"></span> <a href=
-            "http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+                <img data-u="image" src="images/dali1.jpg" />
+                <div data-u="thumb">Salvador Dali</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/valByrene1.jpg" />
+                <div data-u="thumb">Henri Byrene</div>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="images/jayMaisel1.jpg" />
+                <div data-u="thumb">Jay Maisel</div>
+            </div>
         </div>
-    </div><!--FOOTER-->
-    <footer class="row footer">
-        <p class="text-center">Vivamus sagittis lacus vel augue laoreet rutrum
-        faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-    </footer><!--This is the javascript-->
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js">
-    </script> 
-    <script src="js/bootstrap.min.js">
-    </script> 
-</body>
-=======
+        <!-- Thumbnail Navigator -->
+        <div data-u="thumbnavigator" class="jssort09-600-45" style="position:absolute;bottom:0px;left:0px;width:600px;height:45px;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
+            <!-- Thumbnail Item Skin Begin -->
+            <div data-u="slides" style="cursor: default;">
+                <div data-u="prototype" class="p">
+                    <div data-u="thumbnailtemplate" class="t"></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
         <!-- Arrow Navigator -->
         <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
@@ -533,20 +280,19 @@ Come to our exhibition and see art pieces such as these magnificent works of art
     </div>
 				
 			</div>
-			
+		
+		<!--FOOTER-->
 			<div class="row footer" >
 				<p class="text-center">
 					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
 					Duis mollis, est non commodo luctus.
 					</p>
 			</div>
-		
-		<!--This is the javascript-->
+
+			<!--This is the javascript-->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		
-	</div>
-</body>
 
->>>>>>> 2ee0057a75c5dd44cf841a377ed8493e6c65ea39:indexpage.html
+		</div>
+	</body>
 </html>
