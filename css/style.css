@@ -1,5 +1,6 @@
 body{
 	background-color: #FFFFFF;
+	font-family: Palatino Linotype;
 }
 
  #text{
@@ -124,9 +125,16 @@ h2{
 }
 
 .footer{
-	height:100px;
+	height:75px;
 	background-color: #000000;
 	color: #FFFFFF;
+}
+
+.footer ul{
+	margin-left: 100px;
+	font-size: 18px;
+	text-decoration: none;
+	list-style-type: none;
 }
 
 .navbar{

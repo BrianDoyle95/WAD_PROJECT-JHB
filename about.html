@@ -5,6 +5,7 @@
 	<head>
 		
 		<title>Bootstrap 3</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
@@ -35,21 +36,31 @@
 			
 		<!-- logo and banner -->
 		<div class="row header">
-			<img src="images/logo4.png" class="img-responsive" alt="Responsive image"/>
+			<img src="images/logo5.png" class="img-responsive" alt="Responsive image"/>
 		</div>
 		
 	<!--Navigation still in PROGRESS -->
+		<nav class="navbar navbar-default roboto normal" role="navigation">
+			<div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-elements"> <span class="sr-only">Toggle navigation</span>
+							 <span class="icon-bar"></span>
+							 <span class="icon-bar"></span>
+							 <span class="icon-bar"></span>
+                        </button>
+                    </div>
 	
-		<div class="navbar navbar-default row">
-			<ul class="nav navbar-nav">
-				<li><a href="indexpage.html">Home</a></li>
-				<li class="active"><a href="about.html">About</a></li>
-				<li><a href="Artist.html">Artist</a></li>
-				<li><a href="Exhibition.html">Exhibition</a></li>
-				<li><a href="Gallery.html">Gallery</a></li>
-			</ul>
-		
-		</div>
+				<div class="collapse navbar-collapse" id="navigation-elements">
+					<ul class="nav navbar-nav">
+						<li><a href="indexpage.html">Home</a></li>
+						<li class="active"><a href="about.html">About</a></li>
+						<li><a href="Artist.html">Artist</a></li>
+						<li><a href="Exhibition.html">Exhibition</a></li>
+						<li><a href="Gallery.html">Gallery</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 	<!--NAVIGATION ABOVE STILL IN PROGRESS-->
 	
 	<!--Row 1, Calender & Information 1-->
@@ -80,14 +91,27 @@
 			
 			<!--Row 2, Information  & Information 3-->
 			<div class="row">
-			<div class="info2 col-xs-12 col-sm-12 col-md-12">
-				<h2>Contact Us</h2>
+			<div class="info2 col-xs-12 col-sm-12 col-md-6">
+				<h2>Contact Us(website social medias)</h2>
 					<p>Come and join us for a celebration of art on the 16th of January.
 						 Events will be running all day including a charity raffle
 						 at 7:30pm in aid of St Vincent De Paul.
 						 Fun for all the family.</p>
 			</div>
+			
+			<div class="info2 col-xs-12 col-sm-12 col-md-6">
+				<h2>Contact form</h2>
+				<form method="POST" action="contactForm.php" name="contactform">
+					<label for="name"> Name:</label>
+					<input name="name" value="" size="26" /><br/>
+					<label for="email">Email:</label>
+					<input name="email" value="" size="26" /><br/>
+					<label for="comments">Comments:</label>
+					<textarea name="comments" rows="5" cols="20"></textarea><br/>
+					<input id="submit" type="submit" name="submit" value="Submit" />
+				</form>
 			</div>
+		</div>
 
 			
 				
