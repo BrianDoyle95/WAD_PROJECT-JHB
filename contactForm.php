@@ -1,3 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<body>
+
 
 <?php
 
@@ -12,8 +19,7 @@ $subject = 'Message from user' . $name; //- See more at: http://webdesy.com/how-
 
 // Construct email body     
 $body_message = 'From: ' . $name . "\r\n";     
-$body_message .= 'E-mail: ' . $mail_from . "\r\n";     
-$body_message .= 'Phone: ' . $phone . "\r\n";    
+$body_message .= 'E-mail: ' . $mail_from . "\r\n";         
 $body_message .= 'Message: ' . $message;     
 
 // Construct email headers     
@@ -36,3 +42,6 @@ if ($mail_sent == true){ ?>
 	<?php     
 	}
 ?>
+
+</body>
+</html>
