@@ -146,36 +146,3 @@ h2{
 
 
 
-#calendar{
-	width: 130px;
-	height: 180px;
-	background-color: red;
-	color: #fff;
-	border-radius: 10% ;
-	box-shadow: 0 6px 6px 0 rgba(50,50,50,0.6);
-	
-}
- #calendar>p{
-	 font-family: Broadway,georgian,sans-serif;
-	 padding: 10px 0 ;
-	 margin: 0;
-	 color: #fff;
-	 text-align:center;
-	}
-
-#calendar-day{
-	font-size : 18px;
-}
-
-
-#calendar-month-year{
-	font-size : 16px;
-}
-
-
-#calendar-date{
-	font-size : 60px;
-	padding-top: 10px;
-	padding-bottom:0;
-	
-}
