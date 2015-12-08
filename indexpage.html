@@ -10,28 +10,11 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
 
-		<script type="text/javascript">
-
-		   function startTime() {
-				var today = new Date();
-				var hours = today.getHours();
-				var minutes = today.getMinutes();
-				var seconds = today.getSeconds(); <!--clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock-->
-				minutes = checkTime(minutes);
-				seconds = checkTime(seconds);
-				document.getElementById('text').innerHTML =
-				hours + ":" + minutes + ":" + seconds ;
-				var currenttime = setTimeout(startTime, 500);
-			}
-			function checkTime(i) {
-				if (i < 10) {i = "0" + i}; 
-				return i;
-			}
-		</script>
-
+		
+			
 	</head>
-	<body onload="startTime()"> <!--edit clock postioning when possible-->
-		<div id="text"></div>
+	<body > <!--edit clock postioning when possible-->
+
 		
 		<div class="container">
 			
@@ -66,7 +49,31 @@
 	<!--NAVIGATION ABOVE STILL IN PROGRESS-->
 	
 				<!--Row 1, Calender & Information 1-->
-			<script language="php" src="new.php"></script>
+		
+ 
+
+   <div id="popupExample">
+          <div id="popupDateField" class="dateField" style="margin-top: 160px">
+            Show Calendar
+          </div>
+        </div>
+     <script>
+      function setupCalendars() {
+    
+        // Popup Calendar
+        Calendar.setup(
+          {
+            dateField: 'popupDateField',
+            triggerElement: 'popupDateField'
+          }
+        )
+      }
+
+      Event.observe(window, 'load', function() { setupCalendars() })
+    </script>
+	<script src="../js/prototype.js"></script>
+    <script src="../js/calendarview.js"></script>
+ 
 				<div class="info1 col-xs-12 col-sm-12 col-md-8 events">
 					<div class="media">
 					<h2>Event Information</h2>
@@ -146,7 +153,7 @@
 						<dd>list of his painting:
 						<ul>
 						<li>Painting</li>
-						<li>Painting</li>
+						<li>Painting123</li>
 						<li>Painting</li>
 						</ul></dd>
 						<dd><a href="#">More</a></dd>
@@ -280,13 +287,11 @@
 		
 		
 		<!--FOOTER-->
-			<div class="row footer" >
-				<p class="text-left">
-					<ul>
-						<li><a href="https://twitter.com/nciartgalleryb1">Twitter</a></li>
-						<li><a href="#">Facebook</a></li>
-					</ul>
-				</p>
+			<div class="row footer" id="imglink">
+					<ul class="footernav">
+						<li class="footernav twitterlink"><a href="https://twitter.com/nciartgalleryb1">Twitter</a></li>
+						<li class="footernav"><a href="#">Facebook</a></li>
+					</ul>			
 			</div>
 
 			<!--This is the javascript-->
