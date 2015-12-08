@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="artistStyle.xsl" type="text/xsl"?>
+
+<gallery>
+	<artist>
+		<painter>
+				<name>Claude Monet</name>
+				<title>Rouen Cathedral 
+				The Portal In the Sub</title>
+				<country>New York(since 1915)</country>
+				<created>1894</created>
+				<style>Impressionism</style>
+				<size>100cm x 66cm</size>
+			</painter>
+			
+			<painter>
+				<name>Salvador Dali</name>
+				<title>The Persistence of Memory</title>
+				<country>Museum of Modern Art</country>
+				<created>1931</created>
+				<style>Surrealism</style>
+				<size>24cm x 33cm</size>
+			</painter>
+			
+			<painter>
+				<name>Val Byrene</name>
+				<title>Hookers at Rest</title>
+				<country>Red Rag art Gallery</country>
+				<date>1894</date>
+				<style>Contemporary</style>
+				<size>25 x 20 inches</size>
+			</painter>
+			
+			<painter>
+				<name>AdeleChampman</name>
+				<title>Portrait of Claire Hanahoe</title>
+				<country>Ulster Museum, Belfast</country>
+				<date>1894</date>
+				<style>Contemporary</style>
+				<size>25 x 20 inches</size>
+			</painter>
+			
+			
+		
+			<sculptor>
+				<name>Auguste Rodin </name>
+				<title> The Thinker</title>
+				<country> America </country>
+				<date> 1877</date>
+				<style> Classic</style>
+				
+			</sculptor>
+			
+			<sculptor>
+			<name>Donatello </name>
+				<title> The Classic Art</title>
+				<country> Italy </country>
+				<date> 1408</date>
+				<style> Contemporary</style>
+				
+			</sculptor>	
+				
+			<sculptor>
+			
+			<name>Lorenzo Ghiberti </name>
+				<title> The Son Of Gold Smith</title>
+				<country> Italy </country>
+				<date> 1400</date>
+				<style> Contemporary</style>
+				
+			</sculptor>
+				
+				
+			<sculptor>
+			     <name>Henri Matisse </name>
+				<title> waves beast</title>
+				<country> france </country>
+				<date> 1891</date>
+				<style> Contemporary</style>
+				</sculptor>
+				
+		           
+
+                   
+			
+			<photographer>
+				<name>Ansel Adams </name>
+				<country>America </country>
+				<date> 1902</date>
+				<style>clasics </style>
+				<size>25×20 </size>
+			</photographer>
+			
+			<photographer>
+			<name>Robert Capa </name>
+				<country>Hungarian </country>
+				<date> 1948</date>
+				<style>clasics </style>
+				<size>25×20 </size>
+			</photographer>
+			
+			<photographer>
+			<name> Man Ray</name>
+				<country>America </country>
+				<date> 1968</date>
+				<style>clasics </style>
+				<size>25×20 </size>
+			</photographer>
+			
+			<photographer>
+			<name>Cindy Sherman </name>
+				<country>America </country>
+				<date> 1955</date>
+				<style>clasics </style>
+				<size>25×20 </size>
+			</photographer>
+			
+			<photographer>
+			<name>Brian Duffy </name>
+				<country>British </country>
+				<date> 1970</date>
+				<style>clasics </style>
+				<size>25×20 </size>
+			</photographer>
+			
+			<photographer>
+			<name>Jay Maisel </name>
+				<country>America </country>
+				<date> 1990</date>
+				<style>clasics </style>
+				<size>25×20 </size>
+			</photographer>
+		</artist>
+	
+	</gallery>
