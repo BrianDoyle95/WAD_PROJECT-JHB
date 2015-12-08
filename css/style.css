@@ -159,6 +159,12 @@ h2{
 	background-image: url(images/facebook_Icon.png);
 }
 
+.contact{
+	font-size: 20px;
+	text-decoration: none;
+	list-style-type: none;
+}
+
 .navbar{
 	background-color: #000000;
 	border-radius: 0px;
