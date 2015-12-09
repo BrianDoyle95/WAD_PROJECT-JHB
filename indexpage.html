@@ -10,32 +10,27 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet" class="name"/>
 <meta charset="UTF-8">
-<<<<<<< HEAD
-<script src="js/prototype.js"></script>
-<script src="js/calendarview.js"></script>
-<script>
-      function setupCalendars() {
-    
-        // Popup Calendar
-        Calendar.setup(
-          {
-            dateField: 'popupDateField',
-            triggerElement: 'popupDateField'
-          }
-        )
-      }
-
-      Event.observe(window, 'load', function() { setupCalendars() })
-    </script>
-
-=======
->>>>>>> 5f01aab5026450edb5e006b5e321192d47d3ea48
-		
+<script type="text/javascript"> 
+			function startTime() {
+				var today = new Date();
+				var hours = today.getHours();
+				var minutes = today.getMinutes();
+				var seconds = today.getSeconds();         <!----clock code adapted from http://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock ----->
+				minutes = checkTime(minutes);
+				seconds = checkTime(seconds);
+				document.getElementById('text').innerHTML =
+				hours + ":" + minutes + ":" + seconds ;
+				var currenttime = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+				if (i < 10) {i = "0" + i}; 
+				return i;
+			}
+		</script>
 			
 	</head>
-	<body > <!--edit clock postioning when possible-->
-
-		
+	<body onload="startTime()"> <!----edit clock postioning when possible ----->
+			<div id="text"></div>
 		<div class="container">
 			
 		<!--logo and banner-->
@@ -70,19 +65,13 @@
 	<!--NAVIGATION ABOVE STILL IN PROGRESS-->
 	
 				<!--Row 1, Calender & Information 1-->
-<<<<<<< HEAD
+
 		
  
-<div class="row">
-   <div id="popupExample" class="info1 col-xs-12 col-sm-12 col-md-4">
-          <div id="popupDateField" class="dateField" style="margin-top: 160px">
-            Show Calendar
-          </div>
-        </div>
-     
+
 	
  
-=======
+
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-4 calendar">
 						<script language="javascript" type="text/javascript">
@@ -109,15 +98,15 @@
 
 				var TR_start = '<TR>';
 				var TR_end = '</TR>';
-				var highlight_start = '<TD WIDTH="20"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><Corner>';
+				var highlight_start = '<TD WIDTH="30"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=30><B><Corner>';
 				var highlight_end   = '</Corner></TD></TR></TABLE></B>';
-				var TD_start = '<TD WIDTH="20"><Corner>';
+				var TD_start = '<TD WIDTH="35"><Corner>';
 				var TD_end = '</Corner></TD>';
 
 
 
-				cal =  '<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=BBBBBB><TR><TD>';
-				cal += '<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+				cal =  '<TABLE BORDER=1 CELLSPACING=1 CELLPADDING=1 BORDERCOLOR=BBBBBB><TR><TD>';
+				cal += '<TABLE BORDER=0 CELLSPACING=1 CELLPADDING=2>' + TR_start;
 				cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#EFEFEF"><Corner><B>';
 				cal += month_of_year[month]  + '   ' + year + '</B>' + TD_end + TR_end;
 				cal += TR_start;
@@ -190,7 +179,7 @@
 				</script>
 			</div>
 				
->>>>>>> 5f01aab5026450edb5e006b5e321192d47d3ea48
+
 				<div class="info1 col-xs-12 col-sm-12 col-md-8 events">
 					<div class="media">
 					<h2>Event Information</h2>
