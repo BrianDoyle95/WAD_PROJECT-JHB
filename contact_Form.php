@@ -1,17 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>About</title>
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
-		<link href="css/bootstrap.min.css" rel="stylesheet"/>
-		<link href="css/style.css" rel="stylesheet"/>
 
-		<script type="text/javascript">
-
+<<<<<<< HEAD
 		   function startTime() {
 				var today = new Date();
 				var hours = today.getHours();
@@ -129,18 +118,26 @@
 			<!--This is the javascript-->
 			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+=======
+<html>
+	<head>
+	
+>>>>>>> 0811648bfbefeb5173fa1fbf8f7fac7a4786de65
 
+	</head>
+	<body>  
+		
 		<?php
 if (isset($_POST['submit']))
 {
 	$xml = new DomDocument("1.0","utf-8");
-	$xml->load('form.xml');
+	$xml->load("form.xml");
 	
 	$name = $POST['name'];
 	$email = $_POST['email'];
 	$comments = $POST['comments'];
 	
-	$rootTag = $xml->getElementByTagName("forms")->item(0);
+	$rootTag = $xml->getElementByTag("forms")->item(0);
 	
 	$infoTag = $xml->createElement("info");
 		$nameTag = $xml->createElement("name", $name);
@@ -153,12 +150,14 @@ if (isset($_POST['submit']))
 		
 		$rootTag1->appendChild($infoTag);
 	
-	$xml->save('form.xml');
+	$xml->save("form.xml");
 	
 }
 ?>
 
-	</div>
-</body>
 
+	</body>
 </html>
+
+
+
