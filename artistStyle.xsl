@@ -22,7 +22,7 @@
 	<h2>Photographer</h2>
     <table border="1">
       <tr bgcolor="#996767">
-        <th style="text-align:left">Name</th>
+        <th style="text-align:left">Namess</th>
         <th style="text-align:left">Country</th>
       </tr>
       <xsl:for-each select="gallery/artist/photographer">
