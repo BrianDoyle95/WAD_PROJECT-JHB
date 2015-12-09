@@ -2,10 +2,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>About</title>
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<head>
+		
+		<title>Bootstrap 3</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
@@ -28,15 +28,13 @@
 				return i;
 			}
 		</script>
-		
-</head>
-<body onload="startTime()">  <!--edit clock postioning when possible ----->
-			
-			
+
+	</head>
+	<body onload="startTime()">  <!--edit clock postioning when possible ----->
 			<div id="text"></div>
 		<div class="container">
-		
-	<!-- logo and banner -->
+			
+		<!-- logo and banner -->
 		<div class="row header">
 			<img src="images/logo5.png" class="img-responsive" alt="Responsive image"/>
 		</div>
@@ -55,7 +53,7 @@
 				<div class="collapse navbar-collapse" id="navigation-elements">
 					<ul class="nav navbar-nav">
 						<li><a href="indexpage.html">Home</a></li>
-						<li class="active"><a href="about.html">About</a></li>
+						<li class="active"><a href="contact_Form.php">About</a></li>
 						<li><a href="Artist.html">Artist</a></li>
 						<li><a href="Exhibition.html">Exhibition</a></li>
 						<li><a href="Gallery.html">Gallery</a></li>
@@ -105,31 +103,8 @@
 						<dd><a class="contact" href="#">Facebook</a></dd>
 					</dl>
 			</div>
+			
 		
-	
-			<form method="post" action="contact_Form.php">
-					<label for="name"> Name:</label>
-					<input name="name" value="" size="26" /><br/>
-					<label for="email">Email:</label>
-					<input name="email" value="" size="26" /><br/>
-					<label for="comments">Comments:</label>
-					<textarea name="comments" rows="5" cols="20"></textarea><br/>
-					<input type="submit" name="submit" value="Submit" />
-				</form>
-
-				
-				<!--FOOTER-->
-			<div class="row footer" id="imglink">
-					<ul class="footernav">
-						<li class="footernav twitterlink"><a href="https://twitter.com/nciartgalleryb1">Twitter</a></li>
-						<li class="footernav"><a href="#">Facebook</a></li>
-					</ul>			
-			</div>
-
-			<!--This is the javascript-->
-			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-			<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
 		<?php
 if (isset($_POST['submit']))
 {
@@ -140,7 +115,7 @@ if (isset($_POST['submit']))
 	$email = $_POST['email'];
 	$comments = $POST['comments'];
 	
-	$rootTag = $xml->getElementByTagName("forms")->item(0);
+	$rootTag = $xml->getElementByTag("forms")->item(0);
 	
 	$infoTag = $xml->createElement("info");
 		$nameTag = $xml->createElement("name", $name);
@@ -158,7 +133,41 @@ if (isset($_POST['submit']))
 }
 ?>
 
+	<div class="info2 col-xs-12 col-sm-12 col-md-6">
+				<h2>Contact form</h2>
+				<form method="post" action="contact_Form.php" name="contactform">
+					<label for="name"> Name:</label>
+					<input name="name" value="" size="26" /><br/>
+					<label for="email">Email:</label>
+					<input name="email" value="" size="26" /><br/>
+					<label for="comments">Comments:</label>
+					<textarea name="comments" rows="5" cols="20"></textarea><br/>
+					<input id="submit" type="submit" name="submit" value="Submit" />
+				</form>
+			</div>
+		</div>
+
+			
+				
+		
+		<!--FOOTER-->
+			<div class="row footer" id="imglink">
+					<ul class="footernav">
+						<li class="footernav twitterlink"><a href="https://twitter.com/nciartgalleryb1">Twitter</a></li>
+						<li class="footernav"><a href="#">Facebook</a></li>
+					</ul>			
+			</div>
+
+			<!--This is the javascript-->
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+		
+
 	</div>
+	</body>
+</html>
+
 </body>
 
 </html>
