@@ -8,8 +8,9 @@
 		<title>Bootstrap 3</title>
 		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
-		<link href="css/style.css" rel="stylesheet"/>
+		<link href="css/style.css" rel="stylesheet" class="name"/>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <script src="js/prototype.js"></script>
 <script src="js/calendarview.js"></script>
 <script>
@@ -27,10 +28,12 @@
       Event.observe(window, 'load', function() { setupCalendars() })
     </script>
 
+=======
+>>>>>>> 5f01aab5026450edb5e006b5e321192d47d3ea48
 		
 			
 	</head>
-	<body> <!--edit clock postioning when possible-->
+	<body > <!--edit clock postioning when possible-->
 
 		
 		<div class="container">
@@ -59,6 +62,7 @@
 						<li><a href="Artist.html">Artist</a></li>
 						<li><a href="Exhibition.html">Exhibition</a></li>
 						<li><a href="Gallery.html">Gallery</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -66,6 +70,7 @@
 	<!--NAVIGATION ABOVE STILL IN PROGRESS-->
 	
 				<!--Row 1, Calender & Information 1-->
+<<<<<<< HEAD
 		
  
 <div class="row">
@@ -77,6 +82,115 @@
      
 	
  
+=======
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-4 calendar">
+						<script language="javascript" type="text/javascript">
+				var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+				var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+
+				//  DECLARE AND INITIALIZE VARIABLES
+				var Calendar = new Date();
+
+				var year = Calendar.getFullYear();     // Returns year
+				var month = Calendar.getMonth();    // Returns month (0-11)
+				var today = Calendar.getDate();    // Returns day (1-31)
+				var weekday = Calendar.getDay();    // Returns day (1-31)
+
+				var DAYS_OF_WEEK = 7;    // "constant" for number of days in a week
+				var DAYS_OF_MONTH = 31;    // "constant" for number of days in a month
+				var cal;    // Used for printing
+
+				Calendar.setDate(1);    // Start the calendar day at '1'
+				Calendar.setMonth(month);    // Start the calendar month at now
+
+
+
+
+				var TR_start = '<TR>';
+				var TR_end = '</TR>';
+				var highlight_start = '<TD WIDTH="20"><TABLE CELLSPACING=0 BORDER=1 BGCOLOR=DEDEFF BORDERCOLOR=CCCCCC><TR><TD WIDTH=20><B><Corner>';
+				var highlight_end   = '</Corner></TD></TR></TABLE></B>';
+				var TD_start = '<TD WIDTH="20"><Corner>';
+				var TD_end = '</Corner></TD>';
+
+
+
+				cal =  '<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0 BORDERCOLOR=BBBBBB><TR><TD>';
+				cal += '<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=2>' + TR_start;
+				cal += '<TD COLSPAN="' + DAYS_OF_WEEK + '" BGCOLOR="#EFEFEF"><Corner><B>';
+				cal += month_of_year[month]  + '   ' + year + '</B>' + TD_end + TR_end;
+				cal += TR_start;
+
+				//   DO NOT EDIT BELOW THIS POINT  //
+
+				// LOOPS FOR EACH DAY OF WEEK
+				for(index=0; index < DAYS_OF_WEEK; index++)
+				{
+
+				// BOLD TODAY'S DAY OF WEEK
+				if(weekday == index)
+				cal += TD_start + '<B>' + day_of_week[index] + '</B>' + TD_end;
+
+				// PRINTS DAY
+				else
+				cal += TD_start + day_of_week[index] + TD_end;
+				}
+
+				cal += TD_end + TR_end;
+				cal += TR_start;
+
+				// FILL IN BLANK GAPS UNTIL TODAY'S DAY
+				for(index=0; index < Calendar.getDay(); index++)
+				cal += TD_start + '  ' + TD_end;
+
+				// LOOPS FOR EACH DAY IN CALENDAR
+				for(index=0; index < DAYS_OF_MONTH; index++)
+				{
+				if( Calendar.getDate() > index )
+				{
+				  // RETURNS THE NEXT DAY TO PRINT
+				  week_day =Calendar.getDay();
+
+				  // START NEW ROW FOR FIRST DAY OF WEEK
+				  if(week_day == 0)
+				  cal += TR_start;
+
+				  if(week_day != DAYS_OF_WEEK)
+				  {
+
+				  // SET VARIABLE INSIDE LOOP FOR INCREMENTING PURPOSES
+				  var day  = Calendar.getDate();
+
+				  // HIGHLIGHT TODAY'S DATE
+				  if( today==Calendar.getDate() )
+				  cal += highlight_start + day + highlight_end + TD_end;
+
+				  // PRINTS DAY
+				  else
+				  cal += TD_start + day + TD_end;
+				  }
+
+				  // END ROW FOR LAST DAY OF WEEK
+				  if(week_day == DAYS_OF_WEEK)
+				  cal += TR_end;
+				  }
+
+				  // INCREMENTS UNTIL END OF THE MONTH
+				  Calendar.setDate(Calendar.getDate()+1);
+
+				}// end for loop
+
+				cal += '</TD></TR></TABLE></TABLE>';
+
+				//  PRINT CALENDAR
+				document.write(cal);
+
+				//  End -->
+				</script>
+			</div>
+				
+>>>>>>> 5f01aab5026450edb5e006b5e321192d47d3ea48
 				<div class="info1 col-xs-12 col-sm-12 col-md-8 events">
 					<div class="media">
 					<h2>Event Information</h2>
@@ -112,14 +226,13 @@
 					<h4 class="media-heading">Claude Monet</h4>
 					<dl>
 						<dt>Description</dt>
-						<dd>Claude Monet life Summarized. When he started
-						when he died, how famous is etc</dd>
-						<dt>Painting</dt>
-						<dd>list of his painting:
+						<dd>Claude Monet was born 14th November in Rue Laffitte, Paris, France . 
+						died December 5, 1926, Giverny, France </dd>
+			            <dd>list of his painting:
 						<ul>
-						<li>Painting</li>
-						<li>Painting</li>
-						<li>Painting</li>
+						<li>ImpressionSunrise</li>
+						<li>The Water LiyPond</li>
+						<li>Poppies</li>
 						</ul></dd>
 						<dd><a href="#">More</a></dd>
 					</dl>
@@ -131,14 +244,14 @@
 					<h4 class="media-heading">Auguste Rodin</h4>
 					<dl>
 						<dt>Description</dt>
-						<dd>Claude Monet life Summarized. When he started
-						when he died, how famous is etc</dd>
+						<dd>Born: November 12, 1840, Paris, France.
+	                     Died: November 17, 1917, Meudon, France </dd>
 						<dt>Painting</dt>
 						<dd>list of his painting:
 						<ul>
-						<li>Painting</li>
-						<li>Painting</li>
-						<li>Painting</li>
+						<li>The Thinker</li>
+						<li>The Kisser</li>
+						<li>The Gates Of Hell</li>
 						</ul></dd>
 						<dd><a href="#">More</a></dd>
 					</dl>
@@ -147,17 +260,18 @@
 				
 				<div class="info2 col-xs-12 col-sm-6 col-md-3">
 				<div class="media-body">
-					<h4 class="media-heading">Cindy Sherman</h4>
+					<h4 class="media-heading">Salvador Dali</h4>
 					<dl>
 						<dt>Description</dt>
-						<dd>Claude Monet life Summarized. When he started
-						when he died, how famous is etc</dd>
+						<dd>Salvador Dali Born: May 11, 1904,
+						Died: January 23, 1989, Figueres, Spain 
+						</dd>
 						<dt>Painting</dt>
 						<dd>list of his painting:
 						<ul>
-						<li>Painting</li>
-						<li>Painting123</li>
-						<li>Painting</li>
+						<li>The Elephants</li>
+						<li>The Face of War</li>
+						<li>The Basket of Bread</li>
 						</ul></dd>
 						<dd><a href="#">More</a></dd>
 					</dl>
@@ -169,14 +283,15 @@
 					<h4 class="media-heading">Jay Maisel</h4>
 					<dl>
 						<dt>Description</dt>
-						<dd>Claude Monet life Summarized. When he started
-						when he died, how famous is etc</dd>
+						<dd>Donatello 
+						Born: 1386, Florence, Italy 
+						Died: December 13, 1466, Florence, Italy</dd>
 						<dt>Painting</dt>
 						<dd>list of his painting:
 						<ul>
-						<li>Painting</li>
-						<li>Painting</li>
-						<li>Painting</li>
+						<li>David</li>
+						<li>SaintMark</li>
+						<li>Saint George</li>
 						</ul></dd>
 						<dd><a href="#">More</a></dd>
 					</dl>
@@ -284,7 +399,7 @@
         <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
-		</div>
+    </div>
 	</div>
 				
 		
