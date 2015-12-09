@@ -9,7 +9,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
 		<script type="text/javascript"> 
-			function startTime() {
+			/*function startTime() {
 				var today = new Date();
 				var hours = today.getHours();
 				var minutes = today.getMinutes();
@@ -23,13 +23,16 @@
 			function checkTime(i) {
 				if (i < 10) {i = "0" + i}; 
 				return i;
-			}
+			}*/
+			
+			
+
 		</script>
 		
 
 	</head>
 	<body onload="startTime()"> <!----edit clock postioning when possible ----->
-			<div id="text"></div>
+		<!--<div id="text"></div>-->
 			<div class="container">
 		
 			
@@ -60,11 +63,74 @@
 				</div>
 			</div>
 		</nav>
+		
+			
 	<!--NAVIGATION ABOVE STILL IN PROGRESS-->
+	<div class="table col-xs-12 col-sm-12 col-md-8">
+					<table id="demo"></table>
+
+					<script>
+					function loadXMLDoc() {
+					  var xmlhttp = new XMLHttpRequest();
+					  xmlhttp.onreadystatechange = function() {
+						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						  myFunction(xmlhttp);
+						}
+					  };
+					  xmlhttp.open("GET", "xml.xml", true);
+					  xmlhttp.send();
+					}
+					function myFunction(xml) {
+					  var i;
+					  var xmlDoc = xml.xml<div class="table col-xs-12 col-sm-12 col-md-8">
+					<table id="demo"></table>
+
+					<script>
+					function loadXMLDoc() {
+					  var xmlhttp = new XMLHttpRequest();
+					  xmlhttp.onreadystatechange = function() {
+						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						  myFunction(xmlhttp);
+						}
+					  };
+					  xmlhttp.open("GET", "xml.xml", true);
+					  xmlhttp.send();
+					}
+					function myFunction(xml) {
+					  var i;
+					  var xmlDoc = xml.responseXML;
+					  var table="<tr><th>Artist</th><th>Title</th></tr>";
+					  var x = xmlDoc.getElementsByTagName("artist");
+					  for (i = 0; i <x.length; i++) { 
+						table += "<tr><td>" +
+						x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+						"</td><td>" +
+						x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+						"</td></tr>";
+					  }
+					  document.getElementById("demo").innerHTML = table;
+					}
+					</script>
+				</div>	
+			</div>;
+					  var xmlDoc = xml.xml;
+					  var table="<tr><th>name</th><th>Title</th></tr>";
+					  var x = xmlDoc.getElementsByTagName("name");
+					  for (i = 0; i <x.length; i++) { 
+						table += "<tr><td>" +
+						x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+						"</td><td>" +
+						x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+						"</td></tr>";
+					  }
+					  document.getElementById("demo").innerHTML = table;
+					}
+					</script>
+				</div>	
+		
 	
 	<!--Row 1, Calender & Information 1-->
-<<<<<<< HEAD
-				<div class="row">
+				
 					<div class="col-xs-12 col-sm-12 col-md-4 calendar">
 						<script language="javascript" type="text/javascript">
 				var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
@@ -170,51 +236,23 @@
 				//  End -->
 				</script>
 			</div>
-=======
-			<div class="row">
 				<!--Row 1, Calender & Information 1-->
-			<div class="row">		
-				<div class="info1 col-xs-12 col-sm-12 col-md-8">
-					<h2>Table</h2>
-					<p><button type="button" onclick="loadXMLDoc()">Get my Artist</button>
-<br><br>
-<table id="demo"></table>
-
-<button type="button" onclick="loadXMLDoc()">Get my Painter</button>
-<br><br>
-<table id="demo"></table>
-
-<button type="button" onclick="loadXMLDoc()">Get my photographer</button>
-<br><br>
-<table id="demo"></table>
-<button type="button" onclick="loadXMLDoc()">Get my sulptor</button>
-<br><br>
-<table id="demo"></table></p>
-				</div>	
->>>>>>> a34177cda8c39d191fef5bec5c594d961da20681
+					
+				
 		
-		
-				<div class="info1 col-xs-12 col-sm-12 col-md-8">
-					<h2>Event Information</h2>
-					<p>Come and join us for a celebration of art on the 16th of January.
-						 Events will be running all day including a charity raffle
-						 at 7:30pm in aid of St Vincent De Paul.
-						 Fun for all the family.</p>
-				</div>
-			</div>
+			
+			
+	
+	
 			
 			<!--Row 2, Information  & Information 3-->
 			<div class="row">
-				<div class="info2 col-xs-12 col-sm-6 col-md-6">
-				<p>The artists whose work will be on display are Da vinci , Picasso etc... </p>
-				</div>
 
-			
-				<div class="info3 col-xs-12 col-sm-6 col-md-6">
+				<div class="info3 col-xs-12 col-sm-12 col-md-12">
 					<h2>Slideshow</h2>
 					<pre>Come to our exhibition and see art pieces such as these magnificent works of art.</pre>    <!----code from http://www.jssor.com/demos/banner-slider.slider --->
 				</div>
-			</div>
+			
 				<script type="text/javascript" src="js/jssor.slider.mini.js"> </script>
 			<script type="text/javascript" src="js/jquery-1.9.1.min.js"> </script>
                    <script type="text/javascript">
@@ -313,7 +351,8 @@
         <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
-    </div>
+		</div>
+	</div>
 
    
 		<!--FOOTER-->
@@ -327,7 +366,6 @@
 			<!--This is the javascript-->
 			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 			<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
 		</div>
 </body>
 </html>
