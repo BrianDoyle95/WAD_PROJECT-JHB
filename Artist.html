@@ -25,6 +25,8 @@
 				return i;
 			}
 		</script>
+		
+
 	</head>
 	<body onload="startTime()"> <!----edit clock postioning when possible ----->
 			<div id="text"></div>
@@ -62,18 +64,24 @@
 	
 	<!--Row 1, Calender & Information 1-->
 			<div class="row">
-				<div class="calender col-xs-12 col-md-4">
-					<h3>Today's date is ...... 
-						<script type="text/javascript">
-					
-					var Time = new Date()
-					var m = Time.getMonth() + 1      <!----- calendar code adapted from http://www.tizag.com/javascriptT/javascriptdate.php ------->
-					var d = Time.getDate()
-					var y = Time.getFullYear()
-					document.write(m + "/" + d + "/" + y)
-					
-					</script>	
-					</h3>		
+				<!--Row 1, Calender & Information 1-->
+			<div class="row">		
+				<div class="info1 col-xs-12 col-sm-12 col-md-8">
+					<h2>Table</h2>
+					<p><button type="button" onclick="loadXMLDoc()">Get my Artist</button>
+<br><br>
+<table id="demo"></table>
+
+<button type="button" onclick="loadXMLDoc()">Get my Painter</button>
+<br><br>
+<table id="demo"></table>
+
+<button type="button" onclick="loadXMLDoc()">Get my photographer</button>
+<br><br>
+<table id="demo"></table>
+<button type="button" onclick="loadXMLDoc()">Get my sulptor</button>
+<br><br>
+<table id="demo"></table></p>
 				</div>	
 		
 		
