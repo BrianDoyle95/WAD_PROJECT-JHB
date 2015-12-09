@@ -102,7 +102,7 @@
 					<h4 class="media-heading">Check us out!</h4>
 					<dl>
 						<dd><a class="contact" href="https://twitter.com/nciartgalleryb1">Twitter</a></dd>
-						<dd><a class="contact" href="#">Facebook</a></dd>
+						<dd><a class="contact" href="https://www.facebook.com/NCI-Art-Gallery-514510462049981/?fref=ts">Facebook</a></dd>
 					</dl>
 			</div>
 		
@@ -122,7 +122,7 @@
 			<div class="row footer" id="imglink">
 					<ul class="footernav">
 						<li class="footernav twitterlink"><a href="https://twitter.com/nciartgalleryb1">Twitter</a></li>
-						<li class="footernav"><a href="#">Facebook</a></li>
+						<li class="footernav"><a href="https://www.facebook.com/NCI-Art-Gallery-514510462049981/?fref=ts">Facebook</a></li>
 					</ul>			
 			</div>
 
