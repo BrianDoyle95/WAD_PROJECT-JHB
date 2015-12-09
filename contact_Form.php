@@ -5,14 +5,13 @@
 	
 
 	</head>
-	<body>  <!--edit clock postioning when possible ----->
-		
+	<body>  
 		
 		<?php
 if (isset($_POST['submit']))
 {
 	$xml = new DomDocument("1.0","utf-8");
-	$xml->load('form.xml');
+	$xml->load("form.xml");
 	
 	$name = $POST['name'];
 	$email = $_POST['email'];
@@ -31,7 +30,7 @@ if (isset($_POST['submit']))
 		
 		$rootTag1->appendChild($infoTag);
 	
-	$xml->save('form.xml');
+	$xml->save("form.xml");
 	
 }
 ?>

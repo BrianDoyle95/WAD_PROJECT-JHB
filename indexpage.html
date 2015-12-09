@@ -10,6 +10,21 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
 <meta charset="UTF-8">
+<script>
+      function setupCalendars() {
+    
+        // Popup Calendar
+        Calendar.setup(
+          {
+            dateField: 'popupDateField',
+            triggerElement: 'popupDateField'
+          }
+        )
+      }
+
+      Event.observe(window, 'load', function() { setupCalendars() })
+    </script>
+
 		
 			
 	</head>
@@ -51,26 +66,13 @@
 				<!--Row 1, Calender & Information 1-->
 		
  
-
-   <div id="popupExample">
+<div class="row">
+   <div id="popupExample" class="info1 col-xs-12 col-sm-12 col-md-4">
           <div id="popupDateField" class="dateField" style="margin-top: 160px">
             Show Calendar
           </div>
         </div>
-     <script>
-      function setupCalendars() {
-    
-        // Popup Calendar
-        Calendar.setup(
-          {
-            dateField: 'popupDateField',
-            triggerElement: 'popupDateField'
-          }
-        )
-      }
-
-      Event.observe(window, 'load', function() { setupCalendars() })
-    </script>
+     
 	<script src="prototype.js"></script>
     <script src="calendarview.js"></script>
  
@@ -99,6 +101,7 @@
 						</div>
 				</div>
 			</div>
+		</div>
 		
 		
 	<!--Row 2, Information  & Information 3-->
