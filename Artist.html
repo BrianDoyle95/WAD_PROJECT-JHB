@@ -24,14 +24,45 @@
 				if (i < 10) {i = "0" + i}; 
 				return i;
 			}*/
-			
-			
+			function loadXMLDoc(xml.xml)
+				{
+				if (window.ActiveXObject)
+				  {
+				  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+				  }
+				else 
+				  {
+				  xhttp = new XMLHttpRequest();
+				  }
+				xhttp.open("GET", "xml.xml", false);
+				try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+				xhttp.send("");
+				return xhttp.responseXML;
+				}
 
-		</script>
-		
+				function displayResult()
+				{
+				xml = loadXMLDoc("xml.xml");
+				xsl = loadXMLDoc("artistStyle.xsl");
+				// code for IE
+				if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+				  {
+				  ex = xml.transformNode(xsl);
+				  document.getElementById("example").innerHTML = ex;
+				  }
+				// code for Chrome, Firefox, Opera, etc.
+				else if (document.implementation && document.implementation.createDocument)
+				  {
+				  xsltProcessor = new XSLTProcessor();
+				  xsltProcessor.importStylesheet(xsl);
+				  resultDocument = xsltProcessor.transformToFragment(xml, document);
+				  document.getElementById("example").appendChild(resultDocument);
+				  }
+				}
+				</script>
 
 	</head>
-	<body onload="startTime()"> <!----edit clock postioning when possible ----->
+	<body onload="displayResult()"> <!----edit clock postioning when possible ----->
 		<!--<div id="text"></div>-->
 			<div class="container">
 		
@@ -41,7 +72,7 @@
 			<img src="images/logo5.png" class="img-responsive" alt="Responsive image"/>
 		</div>
 	
-	<!--Navigation still in PROGRESS-->
+	<!--Navigation-->
 		<nav class="navbar navbar-default roboto normal" role="navigation">
 			<div class="container-fluid">
                     <div class="navbar-header">
@@ -64,79 +95,11 @@
 			</div>
 		</nav>
 		
-			
-	<!--NAVIGATION ABOVE STILL IN PROGRESS-->
-	<div class="table col-xs-12 col-sm-12 col-md-8">
-					<table id="demo"></table>
 
-					<script>
-					function loadXMLDoc() {
-					  var xmlhttp = new XMLHttpRequest();
-					  xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-						  myFunction(xmlhttp);
-						}
-					  };
-					  xmlhttp.open("GET", "xml.xml", true);
-					  xmlhttp.send();
-					}
-					function myFunction(xml) {
-					  var i;
-					  var xmlDoc = xml.xml<div class="table col-xs-12 col-sm-12 col-md-8">
-					<table id="demo"></table>
-
-					<script>
-					function loadXMLDoc() {
-					  var xmlhttp = new XMLHttpRequest();
-					  xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-						  myFunction(xmlhttp);
-						}
-					  };
-					  xmlhttp.open("GET", "xml.xml", true);
-					  xmlhttp.send();
-					}
-					function myFunction(xml) {
-					  var i;
-					  var xmlDoc = xml.responseXML;
-					  var table="<tr><th>Artist</th><th>Title</th></tr>";
-					  var x = xmlDoc.getElementsByTagName("artist");
-					  for (i = 0; i <x.length; i++) { 
-						table += "<tr><td>" +
-						x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-						"</td><td>" +
-						x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-						"</td></tr>";
-					  }
-					  document.getElementById("demo").innerHTML = table;
-					}
-					</script>
-				</div>	
-			</div>;
-					  var xmlDoc = xml.xml;
-					  var table="<tr><th>name</th><th>Title</th></tr>";
-					  var x = xmlDoc.getElementsByTagName("name");
-					  for (i = 0; i <x.length; i++) { 
-						table += "<tr><td>" +
-						x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-						"</td><td>" +
-						x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-						"</td></tr>";
-					  }
-					  document.getElementById("demo").innerHTML = table;
-					}
-					</script>
-				</div>	
-		
-	
 	<!--Row 1, Calender & Information 1-->
-<<<<<<< HEAD
-				
-=======
 
 				<div class="row">
->>>>>>> origin/master
-					<div class="col-xs-12 col-sm-12 col-md-4 calendar">
+					<div class="col-xs-12 col-sm-12 col-md-3 calendar">
 						<script language="javascript" type="text/javascript">
 				var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
 				var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
@@ -241,35 +204,15 @@
 				//  End -->
 				</script>
 			</div>
-<<<<<<< HEAD
-				<!--Row 1, Calender & Information 1-->
-					
+			
 				
-=======
-
-			<div class="row">
-				<!--Row 1, Calender & Information 1-->
-			<div class="row">		
-				<div class="info1 col-xs-12 col-sm-12 col-md-8">
-					<h2>Table</h2>
-					<p><button type="button" onclick="loadXMLDoc()">Get my Artist</button>
-<br><br>
-<table id="demo"></table>
-
-<button type="button" onclick="loadXMLDoc()">Get my Painter</button>
-<br><br>
-<table id="demo"></table>
-
-<button type="button" onclick="loadXMLDoc()">Get my Photographer</button>
-<br><br>
-<table id="demo"></table>
-<button type="button" onclick="loadXMLDoc()">Get my Sculptor</button>
-<br><br>
-<table id="demo"></table></p>
-				</div>	
+				<div class="xml col-xs-12 col-sm-12 col-md-9">
+				<div id="example" />
+					
+					</div>	
 
 		
->>>>>>> origin/master
+
 		
 			
 			

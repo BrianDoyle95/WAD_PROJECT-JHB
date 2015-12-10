@@ -113,6 +113,10 @@ h2{
 	text-align: center;
 }
 
+h3{
+	text-align: center;
+}
+
 .events{
 	height: 330px;
 	margin-bottom: 50px;
@@ -204,8 +208,13 @@ th, td {
 	width: 250px;
 }
 
-     .gallery{
+.gallery{
 	height: 150px;
 	width: 200px;
-	 }	
+}	
+
+.xml{
+	height: 750px;
+	height: 180px;
+}
 
