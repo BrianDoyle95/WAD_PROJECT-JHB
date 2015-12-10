@@ -132,6 +132,7 @@ h3{
 	height:75px;
 	background-color: #000000;
 	color: #FFFFFF;
+	
 }
 
 .footernav ul{
@@ -218,3 +219,14 @@ th, td {
 	height: 180px;
 }
 
+slideshowstyle{
+	float: right;
+}
+
+#showArtist{
+	padding-top: 40px;
+	}
+	
+	p{
+		text-align: center;
+	}

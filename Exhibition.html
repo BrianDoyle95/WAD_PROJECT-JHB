@@ -66,7 +66,7 @@
 	
 	<!--Row 1, Calender & Information 1-->
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-4 calendar">
+					<div class="col-xs-12 col-sm-12 col-md-3 calendar">
 						<script language="javascript" type="text/javascript">
 				var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
 				var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
@@ -173,7 +173,7 @@
 			</div>
 		
 		
-				<div class="info1 col-xs-12 col-sm-12 col-md-8 events">
+				<div class="info1 col-xs-12 col-sm-12 col-md-5 events">
 				<div class="media">
 					<h2>Event Information</h2>
 						<div class="media-left">
@@ -198,16 +198,59 @@
 						</div>
 				</div>
 			</div>
+			
+			<div class="info1 col-xs-12 col-sm-12 col-md-4">
+			<div id='showEvents'></div><br>
+				<input type="button" onclick="previous()" value="<<">
+				<input type="button" onclick="next()" value=">>">
+
+				<script>
+				var i = 0;
+				displayEvents(i);
+
+				function displayEvents(i) {
+					var xmlhttp = new XMLHttpRequest();
+					xmlhttp.onreadystatechange = function() {
+						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							myFunction(xmlhttp, i);
+						}
+					};
+					xmlhttp.open("GET", "events.xml", true);
+					xmlhttp.send();
+				}
+
+				function myFunction(xml, i) {
+					var xmlDoc = xml.responseXML; 
+					x = xmlDoc.getElementsByTagName("events");
+					document.getElementById("showEvents").innerHTML =
+					"Name: " +
+					x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+					"<br>Date: " +
+					x[i].getElementsByTagName("date")[0].childNodes[0].nodeValue +
+					"<br>Time: " + 
+					x[i].getElementsByTagName("time")[0].childNodes[0].nodeValue;
+				}
+
+				function next() {
+				if (i < x.length-1) {
+				  i++;
+				  displayEvents(i);
+				  }
+				}
+
+				function previous() {
+				if (i > 0) {
+				  i--;
+				  displayEvents(i);
+				  }
+				}
+				</script>
+			
+
 		</div>
 			
-			<!--Row 2, Information  & Information 3-->
-			<div class="row">
-				<div class="info2 col-xs-12 col-sm-6 col-md-6">
-				<p>The artists whose work will be on display are Da vinci , Picasso etc... </p>
-				</div>
-
-			
-				<div class="info3 col-xs-12 col-sm-6 col-md-6">
+			</div>
+				<!--<div class="info3 col-xs-12 col-sm-6 col-md-6">
 					<h2>Slideshow</h2>
 					<pre>Come to our exhibition and see art pieces such as these magnificent works of art.</pre>
 				</div>
@@ -265,7 +308,7 @@
     </script>
 
     <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
-        <!-- Loading Screen -->
+        <!-- Loading Screen
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
@@ -288,26 +331,26 @@
                 <div data-u="thumb">Do you notice arrow responses when click?</div>
             </div>
         </div>
-        <!-- Thumbnail Navigator -->
+        <!-- Thumbnail Navigator 
         <div data-u="thumbnavigator" class="jssort09-600-45" style="position:absolute;bottom:0px;left:0px;width:600px;height:45px;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
-            <!-- Thumbnail Item Skin Begin -->
+            <!-- Thumbnail Item Skin Begin
             <div data-u="slides" style="cursor: default;">
                 <div data-u="prototype" class="p">
                     <div data-u="thumbnailtemplate" class="t"></div>
                 </div>
             </div>
             <!-- Thumbnail Item Skin End -->
-        </div>
-        <!-- Bullet Navigator -->
+        <!--</div>
+        <!-- Bullet Navigator 
         <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
             <div data-u="prototype" style="width:12px;height:12px;"></div>
         </div>
-        <!-- Arrow Navigator -->
+        <!-- Arrow Navigator 
         <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
-    </div>
+    </div>-->
 			<!--FOOTER-->
 			<div class="row footer" id="imglink">
 					<ul class="footernav">

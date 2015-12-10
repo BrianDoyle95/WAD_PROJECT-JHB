@@ -65,7 +65,7 @@
 	<!--Row 1, Calender & Information 1-->
 
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-3 calendar">
+					<div class="col-xs-12 col-sm-12 col-md-4 calendar">
 						<script language="javascript" type="text/javascript">
 				var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
 				var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
@@ -172,72 +172,70 @@
 			</div>
 			
 				
-				<div class="xml col-xs-12 col-sm-12 col-md-9">
-				<div id='showPainter'></div>
+				<div class="xml col-xs-12 col-sm-12 col-md-3">
+				
+				<div id='showArtist'></div><br>
 				<input type="button" onclick="previous()" value="<<">
 				<input type="button" onclick="next()" value=">>">
-				
+
 				<script>
-					var i = 0;
-					displayPainter(i);
+				var i = 0;
+				displayArtist(i);
 
-					function displayPainter(i) {
-						var xmlhttp = new XMLHttpRequest();
-						xmlhttp.onreadystatechange = function() {
-							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-								myFunction(xmlhttp, i);
-							}
-						};
-						xmlhttp.open("GET", "xml.xml", true);
-						xmlhttp.send();
-					}
+				function displayArtist(i) {
+					var xmlhttp = new XMLHttpRequest();
+					xmlhttp.onreadystatechange = function() {
+						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							myFunction(xmlhttp, i);
+						}
+					};
+					xmlhttp.open("GET", "xml.xml", true);
+					xmlhttp.send();
+				}
 
-					function myFunction(xml, i) {
-						var xmlDoc = xml.responseXML; 
-						x = xmlDoc.getElementsByTagName("painter");
-						document.getElementById("showPainter").innerHTML =
-						"Artist: " +
-						x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-						"<br>Painting Title: " +
-						x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-						"<br>Country: " + 
-						x[i].getElementsByTagName("created")[0].childNodes[0].nodeValue +
-						"<br>Year: " + 
-						x[i].getElementsByTagName("country")[0].childNodes[0].nodeValue;
-					}
+				function myFunction(xml, i) {
+					var xmlDoc = xml.responseXML; 
+					x = xmlDoc.getElementsByTagName("artist");
+					document.getElementById("showArtist").innerHTML =
+					"Artist: " +
+					x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+					"<br>Title: " +
+					x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+					"<br>Year: " + 
+					x[i].getElementsByTagName("created")[0].childNodes[0].nodeValue;
+				}
 
-					function next() {
-					if (i < x.length-1) {
-					  i++;
-					  displayPainter(i);
-					  }
-					}
+				function next() {
+				if (i < x.length-1) {
+				  i++;
+				  displayArtist(i);
+				  }
+				}
 
-					function previous() {
-					if (i > 0) {
-					  i--;
-					  displayPainter(i);
-					  }
-					}
+				function previous() {
+				if (i > 0) {
+				  i--;
+				  displayArtist(i);
+				  }
+				}
 				</script>
 
-					</div>	
-
-		
-
-		
-			</div>
-			
-	
-	
-			
-			<!--Row 2, Information  & Information 3-->
-			<div class="row">
-
-				<div class="info3 col-xs-12 col-sm-12 col-md-12">
-					<h2>Slideshow</h2>
-					<pre>Come to our exhibition and see art pieces such as these magnificent works of art.</pre>    <!----code from http://www.jssor.com/demos/banner-slider.slider --->
+					</div>		
+					
+						<div class="info3 col-xs-12 col-sm-12 col-md-4">
+					<h2>Welcome!</h2>
+					<p>Welcome to our Artist Page
+						We would to like to invite you and see the work of our artist 
+						The artists whose work will be on display are Salvador 
+						Dali,Val Byrene ,Ansel Adams Thankyou for visiting our artist page</p>   <!----code from http://www.jssor.com/demos/banner-slider.slider --->
 				</div>
+				</div>
+		
+	
+			
+	
+			<div class="row freshie">
+				
 			
 				<script type="text/javascript" src="js/jssor.slider.mini.js"> </script>
 			<script type="text/javascript" src="js/jquery-1.9.1.min.js"> </script>
@@ -302,23 +300,23 @@
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="img/01.jpg" />
-                <div data-u="thumb">Do you notice it is draggable by mouse/finger?</div>
+                <img data-u="image" src="images/cindy.jpg" />
+                <div data-u="thumb">Cindey Sherman</div>
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="img/02.jpg" />
-                <div data-u="thumb">Did you drag by either horizontal or vertical?</div>
+                <img data-u="image" src="images/dalipic.jpg" />
+                <div data-u="thumb">Salvador Dali</div>
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="img/03.jpg" />
-                <div data-u="thumb">Do you notice navigator responses when drag?</div>
+                <img data-u="image" src="imahes/hdr-rodin.jpg" />
+                <div data-u="thumb">Auguste Rodin</div>
             </div>
             <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="img/04.jpg" />
-                <div data-u="thumb">Do you notice arrow responses when click?</div>
+                <img data-u="image" src="images/.jpg" />
+                <div data-u="thumb">Jay Maisel</div>
             </div>
         </div>
-        <!-- Thumbnail Navigator -->
+        <!-- Thumbnail Navigator --> 
         <div data-u="thumbnavigator" class="jssort09-600-45" style="position:absolute;bottom:0px;left:0px;width:600px;height:45px;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height:100%; background-color: #000; filter:alpha(opacity=40.0); opacity:0.4;"></div>
             <!-- Thumbnail Item Skin Begin -->
@@ -327,7 +325,7 @@
                     <div data-u="thumbnailtemplate" class="t"></div>
                 </div>
             </div>
-            <!-- Thumbnail Item Skin End -->
+            <!-- Thumbnail Item Skin End-->
         </div>
         <!-- Bullet Navigator -->
         <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">

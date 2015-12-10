@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+ xmlns:b="http://www.w3schools.com/xml/" 
+ xmlns:l="http://www.w3schools.com"
+ xmlns:d="http://www.w3schools.com/xml/xml_namespaces.asp">	
+ 
+	<exhibition>
+		<events>
+			 
+				<title>ST.Vincent De Paul</title>
+				<type>Charity</type>
+				<time>7:30pm</time>
+				<date>January 16th</date>
+				<artist_exh>NCIS Artists</artist_exh>
+			</events>
+			
+	<events>
+				<title>Trocaire</title>
+				<type>Fundraising</type>
+				<time>7:00pm</time>
+				<date>February 20th</date>
+				<artist_exh>Local Artists</artist_exh>
+	
+		</events>
+		
+		<events>
+				<title>Primark</title>
+				<type>Donation</type>
+				<time>6:00pm</time>
+				<date>June 12th</date>
+				<artist_exh>Local Artists</artist_exh>
+	
+		</events>
+		
+		<events>
+				<title>Holi Fest</title>
+				<type>Festival</type>
+				<time>5:30pm</time>
+				<date>May 19th</date>
+				<artist_exh>Colour Festival</artist_exh>
+	
+		</events>
+		
+		<events>
+				<title>Christmas Sale</title>
+				<type>Sale</type>
+				<time>7:30pm</time>
+				<date>December 22nd</date>
+				<artist_exh>Homemade Items</artist_exh>
+	
+		</events>
+		
+		<events>
+				<title>Love week</title>
+				<type>Event</type>
+				<time>6:30pm</time>
+				<date>February 15th</date>
+				<artist_exh>NCI Students</artist_exh>
+	
+		</events>
+		
+	</exhibition>
+</xsl:stylesheet>
