@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-vidth, initial-scale=1"/>
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/style.css" rel="stylesheet"/>
-		<script type="text/javascript"> 
+		<script> 
 			/*function startTime() {
 				var today = new Date();
 				var hours = today.getHours();
@@ -24,45 +24,11 @@
 				if (i < 10) {i = "0" + i}; 
 				return i;
 			}*/
-			function loadXMLDoc(xml.xml)
-				{
-				if (window.ActiveXObject)
-				  {
-				  xhttp = new ActiveXObject("Msxml2.XMLHTTP");
-				  }
-				else 
-				  {
-				  xhttp = new XMLHttpRequest();
-				  }
-				xhttp.open("GET", "xml.xml", false);
-				try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
-				xhttp.send("");
-				return xhttp.responseXML;
-				}
-
-				function displayResult()
-				{
-				xml = loadXMLDoc("xml.xml");
-				xsl = loadXMLDoc("artistStyle.xsl");
-				// code for IE
-				if (window.ActiveXObject || xhttp.responseType == "msxml-document")
-				  {
-				  ex = xml.transformNode(xsl);
-				  document.getElementById("example").innerHTML = ex;
-				  }
-				// code for Chrome, Firefox, Opera, etc.
-				else if (document.implementation && document.implementation.createDocument)
-				  {
-				  xsltProcessor = new XSLTProcessor();
-				  xsltProcessor.importStylesheet(xsl);
-				  resultDocument = xsltProcessor.transformToFragment(xml, document);
-				  document.getElementById("example").appendChild(resultDocument);
-				  }
-				}
+			
 				</script>
 
 	</head>
-	<body onload="displayResult()"> <!----edit clock postioning when possible ----->
+	<body onload="startTime()"> <!----edit clock postioning when possible ----->
 		<!--<div id="text"></div>-->
 			<div class="container">
 		
@@ -207,14 +173,60 @@
 			
 				
 				<div class="xml col-xs-12 col-sm-12 col-md-9">
-				<div id="example" />
-					
+				<div id='showPainter'></div>
+				<input type="button" onclick="previous()" value="<<">
+				<input type="button" onclick="next()" value=">>">
+				
+				<script>
+					var i = 0;
+					displayPainter(i);
+
+					function displayPainter(i) {
+						var xmlhttp = new XMLHttpRequest();
+						xmlhttp.onreadystatechange = function() {
+							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+								myFunction(xmlhttp, i);
+							}
+						};
+						xmlhttp.open("GET", "xml.xml", true);
+						xmlhttp.send();
+					}
+
+					function myFunction(xml, i) {
+						var xmlDoc = xml.responseXML; 
+						x = xmlDoc.getElementsByTagName("painter");
+						document.getElementById("showPainter").innerHTML =
+						"Artist: " +
+						x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+						"<br>Painting Title: " +
+						x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+						"<br>Country: " + 
+						x[i].getElementsByTagName("created")[0].childNodes[0].nodeValue +
+						"<br>Year: " + 
+						x[i].getElementsByTagName("country")[0].childNodes[0].nodeValue;
+					}
+
+					function next() {
+					if (i < x.length-1) {
+					  i++;
+					  displayPainter(i);
+					  }
+					}
+
+					function previous() {
+					if (i > 0) {
+					  i--;
+					  displayPainter(i);
+					  }
+					}
+				</script>
+
 					</div>	
 
 		
 
 		
-			
+			</div>
 			
 	
 	
@@ -326,8 +338,7 @@
         <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
         <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
 		</div>
-	</div>
-
+		</div>
    
 		<!--FOOTER-->
 			<div class="row footer" id="imglink">
@@ -340,6 +351,7 @@
 			<!--This is the javascript-->
 			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 			<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		</div>
+		
+	</div>
 </body>
 </html>
